@@ -1,1 +1,1 @@
-modelao de base de datos
+# modela do  y ddl
