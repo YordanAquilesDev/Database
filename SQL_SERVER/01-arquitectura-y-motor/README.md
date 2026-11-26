@@ -43,5 +43,7 @@ SQL Server sigue un modelo cliente-servidor dividido en capas modulares que coor
 
 ## Contenido de Esta Carpeta
 
+> **Nota sobre entornos:** Los scripts de esta carpeta están orientados a **SQL Server en instancia / servidor con acceso a disco** (local o máquina virtual, incluyendo VMs en Azure con discos administrados y buenas prácticas de E/S). En servicios gestionados como **Azure SQL Database**, la plataforma administra el almacenamiento y los recursos según el nivel de cómputo (DTU/vCore) y la infraestructura compartida/gestionada, por lo que el control de archivos físicos y ciertas consultas del motor aplican de forma distinta.
+
 * `01_configuracion_bd_y_filegroups.sql` — Script de creación de base de datos con archivos, *filegroups* y crecimiento controlado.
 * `02_inspeccion_motor_y_memoria.sql` — Consultas DMV (*Dynamic Management Views*) básicas para revisar estado de memoria, archivos y `tempdb`.
