@@ -1,8 +1,13 @@
+--es una base de datos relacional diseñada para gestionar la operación diaria de una empresa textil estándar, cubriendo tres procesos clave:
+--  *Compra de materia prima: Registra proveedores, compras (Compra / Detalle_Compra) y el catálogo de insumos o telas (Materia_Prima) con sus unidades de medida y precios.
+--   *Producción de productos: Controla las órdenes de fabricación (Orden_Produccion) por producto y talla (Producto_Talla), el área/supervisor involucrado y el consumo de insumos (Detalle_Orden_Material).
+--   *Ventas de productos: Gestiona clientes (Cliente), tiendas o sucursales (Tienda), ventas (Venta / Detalle_Venta) y el inventario disponible por tienda y variante (Inventario_Tienda), apoyándose en catálogos base como Departamento, Categoria y Talla.
+
+
 CREATE DATABASE DB_Textil;
-GO
+
 
 USE DB_Textil;
-GO
 
 -- 1. DEPARTAMENTO (Ventas, Producción, Administración, etc.)
 CREATE TABLE Departamento (
@@ -23,7 +28,6 @@ CREATE TABLE Tienda (
 -- 3. EMPLEADO
 -- Nota: la regla de negocio sobre si un empleado de área distinta a Ventas puede
 -- o no tener tienda asignada se gestiona vía lógica de aplicación / procedimiento
--- (una restricción CHECK en SQL Server no puede consultar la tabla Departamento).
 CREATE TABLE Empleado (
     id_empleado INT IDENTITY(1,1) PRIMARY KEY,
     nombre VARCHAR(50) NOT NULL,
@@ -204,4 +208,4 @@ CREATE TABLE Detalle_Venta (
     CONSTRAINT FK_DV_ProductoTalla FOREIGN KEY (id_producto_talla)
         REFERENCES Producto_Talla(id_producto_talla)
 );
-GO
+
