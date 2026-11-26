@@ -1,1 +1,0 @@
-constasl sql server 
