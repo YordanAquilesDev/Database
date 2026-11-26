@@ -28,6 +28,7 @@ SELECT
 FROM sys.dm_os_sys_info;
 
 -- 3. Archivos de tempdb (útil para revisar si creció de más o si está equilibrada)
+-- mdf , .ldf , .ndf,  que fueron configurados anteriormente
 SELECT
     name AS archivo_tempdb,
     type_desc AS tipo,
