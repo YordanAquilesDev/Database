@@ -1,6 +1,6 @@
 # Modelado y DDL
 
-Este documento describe el diseño relacional, la aplicación de las **Formas Normales (1FN, 2FN y 3FN)** y la definición de la estructura física mediante comandos **DDL (Data Definition Language)** para el sistema de gestión textil de **CORP MACKAS S.A.C.**[cite: 1, 2].
+Este documento describe el diseño relacional, la aplicación de las **Formas Normales (1FN, 2FN y 3FN)** y la definición de la estructura física mediante comandos **DDL (Data Definition Language)** para el sistema de gestión textil de **CORP MACKAS S.A.C.**.
 
 ---
 
@@ -31,4 +31,4 @@ Los comandos **DDL** son las sentencias SQL utilizadas para crear, modificar y e
 * **`CREATE `:** Permiten crear la objetos dentro de la base de datos o servidor .
 * **`PRIMARY KEY` y `FOREIGN KEY`:** Garantizan la unicidad de cada registro y la integridad referencial entre tablas relacionadas (por ejemplo, vincular `Venta` con `Tienda`, `Empleado` y `Cliente`, o `Detalle_Orden_Material` con `Orden_Produccion` y `Materia_Prima`)[cite: 1, 2].
 * **`UNIQUE` y `CHECK`:** Refuerzan las reglas del negocio a nivel de base de datos, como evitar combinaciones duplicadas de producto-talla por tienda (`UNIQUE`), impedir cantidades o montos negativos (`CHECK`) y restringir estados o tipos de pago válidos[cite: 1, 2].
-* **`ALTER TABLE`:** Permite evolucionar el esquema sin recrear las tablas desde cero, ya sea agregando o eliminando columnas, modificando restricciones o ajustando relaciones según cambien los requerimientos del negocio[cite: 2].
+* **`ALTER TABLE`:** Permite evolucionar el esquema sin recrear las tablas desde cero, ya sea agregando o eliminando columnas, modificando restricciones o ajustando relaciones según cambien los requerimientos del negocio.
