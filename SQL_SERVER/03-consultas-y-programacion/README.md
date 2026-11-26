@@ -25,9 +25,10 @@ INNER JOIN Tienda t ON v.id_tienda = t.id_tienda
 INNER JOIN Detalle_Venta dv ON v.id_venta = dv.id_venta
 GROUP BY t.nombre_tienda, v.tipo_pago
 ORDER BY ingresos_totales DESC;
+```
 Top de productos y tallas más vendidos
 Identifica las variantes (Producto + Talla / SKU) que generan mayor ingreso y rotación.
-
+```sql
 SQL
 SELECT TOP 10
     p.nombre_producto,
@@ -122,9 +123,10 @@ INNER JOIN Producto_Talla pt ON op.id_producto_talla = pt.id_producto_talla
 INNER JOIN Producto p ON pt.id_producto = p.id_producto
 INNER JOIN Talla ta ON pt.id_talla = ta.id_talla
 ORDER BY op.fecha_inicio DESC;
+```
 Consumo total de materia prima por insumo y unidad de medida
 Resume cuánta tela o avío se ha asignado/consumido en las órdenes de producción y su costo estimado según Materia_Prima.precio_unidad.
-
+```sql
 SQL
 SELECT 
     mp.id_materia_prima,
