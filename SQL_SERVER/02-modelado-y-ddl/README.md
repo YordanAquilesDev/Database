@@ -6,7 +6,7 @@ Este documento describe el diseño relacional, la aplicación de las **Formas No
 
 ## Diagrama Entidad-Relación (ER)
 
-A continuación se presenta el diagrama de la base de datos (ubicado al mismo nivel que este `README.md`):
+A continuación se presenta el diagrama de la base de datos:
 
 ![Diagrama ER de la Base de Datos](ER-Database.png)
 
