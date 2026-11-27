@@ -1,4 +1,4 @@
-# 💾 Backups y Recuperación
+# Backups y Recuperación
 
 En esta sección se documentan las estrategias de respaldo y recuperación ante fallos en SQL Server, contrastando la gestión manual/automatizada en entornos locales o máquinas virtuales frente a los respaldos gestionados en Azure.
 
