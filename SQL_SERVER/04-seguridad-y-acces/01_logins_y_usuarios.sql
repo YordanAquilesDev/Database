@@ -1,0 +1,2 @@
+create login 
+create user 
